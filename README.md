@@ -15,7 +15,7 @@ Android app that displays all your app information. including WIFI, Device versi
 ### Motivation
 
 
-<a href="http://bit.ly/2DeviceInfo"><img width="200" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://github.com/Keeprawteach/Device-Info/blob/master/screenshots/play.png"></a>
+<a href="http://bit.ly/2DeviceInfo" target="_blank"><img width="200" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://github.com/Keeprawteach/Device-Info/blob/master/screenshots/play.png"></a>
 
 ## Authors
 
