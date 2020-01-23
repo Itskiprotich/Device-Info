@@ -1,6 +1,6 @@
-# Hava Cabs
+# Device Info App
 
-Hava is a modern, sustainable and fast-growing online ride-hailing company based in Kenya with an aim of balancing a Driver’s need to earn a livelihood with that of a Rider, affordable transportation across major cities and towns. With a wide range of options to choose from; vehicle types to drivers nearby, we are the panacea to all your conveyance ills. Riders can quickly request a ride from their mobile phone using the Hava app..
+Android app that displays all your app information. including WIFI, Device version, Processor and others.
 
 ## App Overiew 
 
@@ -10,9 +10,18 @@ Hava is a modern, sustainable and fast-growing online ride-hailing company based
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+-------
 
-## Do NOT FORGET
+    Copyright 2017 - 2020 Kiprotich Japheth
 
-Remember to enable internet permissions
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
 
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
