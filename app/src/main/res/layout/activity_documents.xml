@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/coordinatorLayout"
+    android:layout_height="match_parent"
+    tools:context=".auth.documents.DocumentsActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.imeja.carpooling.styles.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginRight="20dp"
+                android:lineSpacingExtra="4dp"
+                android:text="@string/label_please_upload_your_documents"
+                android:textColor="@color/text_4"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                style="@style/DriverDocumentItemParent"
+                android:onClick="onDriverLicenseClick">
+
+                <com.imeja.carpooling.styles.CustomTextView
+                    style="@style/DriverDocumentItemLabel"
+                    android:text="@string/label_driver_license" />
+
+                <ImageView
+                    android:id="@+id/iv_driver_docuements_driver_license_next"
+                    style="@style/DriverDocumentItemArrow" />
+
+                <ImageView
+                    android:id="@+id/iv_driver_docuements_driver_license_saved"
+                    style="@style/DriverDocumentItemTick" />
+
+            </LinearLayout>
+
+
+            <View style="@style/DriverDocumentItemSeperator" />
+
+            <LinearLayout
+                style="@style/DriverDocumentItemParent"
+                android:onClick="onVehicleRegistrationClick">
+
+                <com.imeja.carpooling.styles.CustomTextView
+                    style="@style/DriverDocumentItemLabel"
+                    android:text="@string/label_vehicle_registration" />
+
+                <ImageView
+                    android:id="@+id/iv_driver_docuements_vehicle_registration_next"
+                    style="@style/DriverDocumentItemArrow" />
+
+                <ImageView
+                    android:id="@+id/iv_driver_docuements_vehicle_registration_saved"
+                    style="@style/DriverDocumentItemTick" />
+
+            </LinearLayout>
+
+
+            <View style="@style/DriverDocumentItemSeperator" />
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="12dp"
+        android:src="@drawable/ic_next_arrow"
+        android:tint="@color/white"
+        app:fabSize="normal" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:title="@string/app_name">
+        <menu>
+            <item
+                android:id="@+id/action_rides"
+                android:icon="@drawable/ic_directions_car_black_24dp"
+                android:orderInCategory="100"
+                android:title="@string/action_rides"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/action_pay"
+                android:icon="@drawable/payments"
+                android:orderInCategory="100"
+                android:title="@string/pay"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/action_vehicle"
+                android:icon="@drawable/ic_local_car_wash_black_24dp"
+                android:orderInCategory="100"
+                android:title="@string/action_vehicle"
+                app:showAsAction="never" />
+
+            <item
+                android:id="@+id/action_contribute"
+                android:icon="@drawable/ic_invert_colors_black_24dp"
+                android:orderInCategory="100"
+                android:title="@string/action_contribute"
+                app:showAsAction="never" />
+        </menu>
+    </item>
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/action_chathere"
+                android:icon="@drawable/ic_chat_black_24dp"
+                android:orderInCategory="100"
+                android:title="@string/action_chathere"
+                app:showAsAction="never" />
+
+            <item
+                android:id="@+id/action_offer"
+                android:icon="@drawable/offers"
+                android:orderInCategory="100"
+                android:title="@string/action_offer"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/action_share"
+                android:icon="@drawable/ic_share_black_24dp"
+                android:orderInCategory="100"
+                android:title="@string/action_share"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/action_refer"
+                android:icon="@drawable/rewards"
+                android:orderInCategory="100"
+                android:title="@string/action_Refer"
+                app:showAsAction="never" />
+        </menu>
+    </item>
+    <item android:title="System">
+        <menu>
+            <item
+                android:id="@+id/action_settings"
+                android:icon="@drawable/settings"
+                android:orderInCategory="100"
+                android:title="@string/action_settings"
+                app:showAsAction="never" />
+
+            <item
+                android:id="@+id/action_help_mee"
+                android:icon="@drawable/ic_help_outline_black_24dp"
+                android:orderInCategory="100"
+                android:title="@string/help"
+                app:showAsAction="never" />
+
+            <item
+                android:id="@+id/action_logout"
+                android:icon="@drawable/ic_power_settings_new_black_24dp"
+                android:orderInCategory="100"
+                android:title="@string/action_logout"
+                app:showAsAction="never" />
+        </menu>
+    </item>
+
+</menu>

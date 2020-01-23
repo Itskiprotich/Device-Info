@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FF9800</color>
+    <color name="colorPrimaryDark">#FF9800</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="circle">#D81B60</color>
+    <color name="green">#4CAF50</color>
+    <color name="yellow">#FFEB3B</color>
+    <color name="bg_fab_3">#3F3F3F</color>
+    <color name="gray_transparent_70">#7066696C</color>
+    <color name="white">#fff</color>
+    <color name="black">#000</color>
+    <color name="text_hint">#bababa</color>
+    <color name="text_1">#a09f9f</color>
+    <color name="text_2">#7f7f7f</color>
+    <color name="text_3">#777676</color>
+    <color name="text_4">#5e5e5e</color>
+    <color name="text_5">#3b3b3b</color>
+    <color name="transparent">#3b3b3b</color>
+
+    <color name="underline_color">#8d8d8d</color>
+    <color name="underline_light">#ebebeb</color>
+    <color name="gray_light_1">#BCC1C7</color>
+    <color name="grey_500">#9d9d9d</color>
+
+
+    <color name="colorBackground">#333C46</color>
+    <color name="colorSplashText">#F0F0F0</color>
+    <color name="colorProgressBar">#FFCE511C</color>
+    <color name="colorTextView">#83898E</color>
+
+    <color name="colorTransparent">#00968E8E</color>
+</resources>

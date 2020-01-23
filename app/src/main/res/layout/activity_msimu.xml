@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="6"
+    tools:context=".auth.MsimuActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_collapseMode="pin"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/registration"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_18sp" />
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4.2"
+            android:background="#cfd8dc"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/icon"
+                android:layout_width="280dp"
+                android:layout_height="140dp"
+                android:layout_marginTop="45dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/slogos" />
+
+            <TextView
+                android:id="@+id/title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:text="@string/app_name"
+                android:theme="@style/ThemeOverlay.MyTitleText" />
+
+            <TextView
+                android:id="@+id/status"
+                style="@style/ThemeOverlay.MyTextDetail"
+                android:text="You are not logged in !"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="@color/colorAccent"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/detail"
+                    style="@style/ThemeOverlay.MyTextDetail"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    tools:text="Veriication Sucessfull" />
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/detail"
+                    android:layout_centerHorizontal="true"
+                    android:padding="5dp"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+        <com.kofigyan.stateprogressbar.StateProgressBar
+            android:id="@+id/state_progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:spb_currentStateNumber="one"
+            app:spb_maxStateNumber="four" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.8">
+
+            <LinearLayout
+                android:id="@+id/phone_auth_fields"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="15dp">
+
+                    <LinearLayout
+                        android:id="@+id/phoneLinearLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/holder"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="40dp"
+                            android:layout_marginBottom="15dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/iv_mobile_verification_country_flag"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_gravity="left|center_vertical"
+                                android:background="@drawable/circle_gray"
+                                android:padding="2dp"
+                                android:scaleType="centerCrop"
+                                app:srcCompat="@drawable/ic_nation_america" />
+
+
+                            <Spinner
+                                android:id="@+id/spinner_mobile_verification_country_code"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="@color/colorPrimary"
+                                android:gravity="center_vertical"
+                                android:minWidth="60dp"
+                                android:minHeight="45dp"
+                                android:theme="@style/SpinnerStyle" />
+
+                            <EditText
+                                android:id="@+id/field_phone_number"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:hint="@string/hint_enter_your_number"
+                                android:inputType="phone"
+                                android:minHeight="45dp"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/button_start_verification"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.0"
+                            android:background="@drawable/button_drawable"
+                            android:text="@string/start_phone_auth_button"
+                            android:textColor="@color/white"
+                            android:theme="@style/ThemeOverlay.MyDarkButton" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/codeLinearLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.imeja.carpooling.styles.CustomTextView
+                            android:id="@+id/txt_mobile_verification_otp_label"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="40dp"
+                            android:text="@string/label_enter_the_verification_code" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_mobile_verification_otp"
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <com.imeja.carpooling.styles.OTPEditText
+                                android:id="@+id/etxt_mobile_verification_one"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:background="@drawable/circle_white_with_gray_edge"
+                                android:gravity="center"
+                                android:hint="0"
+                                android:inputType="number"
+                                android:maxLength="1"
+                                android:textColor="@color/text_4"
+                                android:textColorHint="@color/text_hint"
+                                android:textCursorDrawable="@color/colorPrimaryDark" />
+
+                            <com.imeja.carpooling.styles.OTPEditText
+                                android:id="@+id/etxt_mobile_verification_two"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="5dp"
+                                android:background="@drawable/circle_white_with_gray_edge"
+                                android:gravity="center"
+                                android:hint="0"
+                                android:inputType="number"
+                                android:maxLength="1"
+                                android:textColor="@color/text_4"
+                                android:textColorHint="@color/text_hint"
+                                android:textCursorDrawable="@color/colorPrimaryDark" />
+
+                            <com.imeja.carpooling.styles.OTPEditText
+                                android:id="@+id/etxt_mobile_verification_three"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="5dp"
+                                android:background="@drawable/circle_white_with_gray_edge"
+                                android:gravity="center"
+                                android:hint="0"
+                                android:inputType="number"
+                                android:maxLength="1"
+                                android:textColor="@color/text_4"
+                                android:textColorHint="@color/text_hint"
+                                android:textCursorDrawable="@color/colorPrimaryDark" />
+
+                            <com.imeja.carpooling.styles.OTPEditText
+                                android:id="@+id/etxt_mobile_verification_four"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="5dp"
+                                android:background="@drawable/circle_white_with_gray_edge"
+                                android:gravity="center"
+                                android:hint="0"
+                                android:inputType="number"
+                                android:maxLength="1"
+                                android:textColor="@color/text_4"
+                                android:textColorHint="@color/text_hint"
+                                android:textCursorDrawable="@color/colorPrimaryDark" />
+
+                            <com.imeja.carpooling.styles.OTPEditText
+                                android:id="@+id/etxt_mobile_verification_five"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="5dp"
+                                android:background="@drawable/circle_white_with_gray_edge"
+                                android:gravity="center"
+                                android:hint="0"
+                                android:inputType="number"
+                                android:maxLength="1"
+                                android:textColor="@color/text_4"
+                                android:textColorHint="@color/text_hint"
+                                android:textCursorDrawable="@color/colorPrimaryDark" />
+
+                            <com.imeja.carpooling.styles.OTPEditText
+                                android:id="@+id/etxt_mobile_verification_six"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="5dp"
+                                android:background="@drawable/circle_white_with_gray_edge"
+                                android:gravity="center"
+                                android:hint="0"
+                                android:inputType="number"
+                                android:maxLength="1"
+                                android:textColor="@color/text_4"
+                                android:textColorHint="@color/text_hint"
+                                android:textCursorDrawable="@color/colorPrimaryDark" />
+
+                        </LinearLayout>
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:visibility="invisible"
+                            android:layout_height="wrap_content">
+
+                            <EditText
+                                android:id="@+id/field_verification_code"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:hint="@string/hint_verification_code"
+                                android:visibility="invisible"
+                                android:inputType="number"
+                                android:textColor="@color/black"
+                                android:theme="@style/ThemeOverlay.MyLightEditText" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="2.0">
+
+
+                            <Button
+                                android:id="@+id/button_verify_phone"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:background="@drawable/button_drawable"
+                                android:text="@string/verify_phone_auth"
+                                android:textColor="@color/white"
+                                android:theme="@style/ThemeOverlay.MyDarkButton" />
+
+                            <View
+                                android:layout_width="4dp"
+                                android:layout_height="4dp" />
+
+                            <Button
+                                android:id="@+id/button_resend"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:background="@drawable/button_drawable"
+                                android:text="@string/resend_phone_auth"
+                                android:textColor="@color/white"
+                                android:theme="@style/ThemeOverlay.MyDarkButton" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/signed_in_buttons"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:visibility="gone"
+                android:weightSum="1.0">
+
+                <Button
+                    android:id="@+id/sign_out_button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/button_drawable"
+                    android:text="Sign Out"
+                    android:textColor="@color/white"
+                    android:theme="@style/ThemeOverlay.MyDarkButton" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

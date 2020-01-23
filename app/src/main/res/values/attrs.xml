@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="CustomTextView">
+        <attr name="trimLength" format="integer"/>
+        <attr name="customFont" format="string"/>
+        <attr name="textStyle" format="integer"/>
+    </declare-styleable>
+</resources>

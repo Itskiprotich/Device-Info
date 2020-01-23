@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_item_help"
+    style="@style/MenuItemParent"
+    android:background="?selectableItemBackground">
+
+    <ImageView
+        android:id="@+id/iv_item_help"
+        style="@style/MenuItemImage"
+        app:srcCompat="@drawable/ic_help"/>
+
+    <com.imeja.carpooling.styles.CustomTextView
+        android:id="@+id/txt_item_help_title"
+        style="@style/MenuItemLabel"
+        android:text="@string/label_help"/>
+
+    <ImageView
+        style="@style/MenuItemArrow"
+        app:srcCompat="@drawable/ic_toolbar_back"/>
+</LinearLayout>

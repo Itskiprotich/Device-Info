@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.imeja.carpooling">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:name=".Appcontroller"
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".settings.SettingsActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".searching.SearchActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".myaccount.MyAccountActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".notification.NotificationActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".coolmap.MapsActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".camera.FaceActivity"
+            android:theme="@style/AppTheme.NoActionBar.FullScreen" />
+        <activity
+            android:name=".camera.BackCameraActivity"
+            android:theme="@style/AppTheme.NoActionBar.FullScreen" />
+        <activity
+            android:name=".auth.Hallfinder"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".auth.MsimuActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".wallet.WalletActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".vehicle.VehiclesActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".rewards.RewardsActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".payments.PaymentsActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".offers.OffersActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".help.HelpActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".chat.ChatActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".confirmride.ConfirmRideActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".riderprofile.RiderProfileActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".riders.RidesActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".auth.login.LoginActivity" />
+        <activity android:name=".auth.documents.DocumentsActivity" />
+        <activity android:name=".auth.terms.TermsActivity" />
+        <activity android:name=".auth.profile.ProfileActivity" />
+        <activity android:name=".auth.selection.SelectionActivity" />
+        <activity android:name=".auth.name.NamesActivity" />
+        <activity android:name=".auth.phone.PhoneActivity" />
+        <activity android:name=".SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+    </application>
+
+</manifest>

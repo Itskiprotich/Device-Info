@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="15dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_drawable"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/find"
+            android:layout_width="@dimen/size_0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/freebut"
+            android:drawableLeft="@drawable/ic_directions_car_black_24dp"
+            android:drawableTint="@color/white"
+            android:fontFamily="@font/font"
+            android:onClick="handleFindRide"
+            android:text="Find Ride"
+            android:textColor="@color/white"
+            android:textSize="10sp" />
+
+
+        <Button
+            android:id="@+id/offer"
+            android:layout_width="@dimen/size_0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:drawableLeft="@drawable/ic_supervisor_account_black_24dp"
+            android:drawableTint="@color/white"
+            android:fontFamily="@font/font"
+            android:onClick="handleOfferRide"
+            android:text="Offer Ride"
+            android:textColor="@color/white"
+            android:textSize="10sp" />
+
+    </LinearLayout>
+
+    <!--Best Offer-->
+    <LinearLayout
+        android:id="@+id/findingRide"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5sp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/linear_background"
+        android:orientation="vertical">
+
+
+        <EditText
+            android:id="@+id/planning_to_go"
+            android:layout_width="match_parent"
+            android:layout_height="45sp"
+            android:layout_marginLeft="7sp"
+            android:background="@null"
+            android:drawableRight="@drawable/location"
+            android:fontFamily="@font/font"
+            android:hint="@string/planning_to_go"
+            android:imeActionLabel="Sign In"
+            android:imeOptions="actionUnspecified"
+            android:inputType="text"
+            android:padding="7sp"
+            android:textColorHint="@color/black"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.6dp"
+            android:background="#c0c0c0" />
+
+        <EditText
+            android:id="@+id/where_to_pick_you"
+            android:layout_width="match_parent"
+            android:layout_height="45sp"
+            android:layout_marginLeft="7sp"
+            android:background="@null"
+            android:drawableRight="@drawable/location"
+            android:fontFamily="@font/font"
+            android:hint="@string/where_to_pick_you"
+            android:inputType="text"
+            android:padding="7sp"
+            android:textColorHint="@color/black"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.6dp"
+            android:background="#c0c0c0" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <EditText
+                android:id="@+id/which_date"
+                android:layout_width="0dp"
+                android:layout_height="45sp"
+                android:layout_marginLeft="7sp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:drawableRight="@drawable/ic_date_range_black_24dp"
+                android:fontFamily="@font/font"
+                android:hint="@string/which_date"
+                android:inputType="text"
+                android:padding="7sp"
+                android:textColorHint="@color/black"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/seat_to_book"
+                android:layout_width="0dp"
+                android:layout_height="45sp"
+                android:layout_marginLeft="7sp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:drawableRight="@drawable/ic_airline_seat_recline_extra_black_24dp"
+                android:fontFamily="@font/font"
+                android:hint="@string/seat_no"
+                android:inputType="text"
+                android:padding="7sp"
+                android:textColorHint="@color/black"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0.6dp"
+                android:layout_weight="0.9"
+                android:background="#c0c0c0" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0.6dp"
+                android:layout_weight="0.1"
+                android:background="@null" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0.6dp"
+                android:layout_weight="1"
+                android:background="#c0c0c0" />
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.6dp"
+            android:background="#c0c0c0" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="30sp"
+            android:layout_marginLeft="7sp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/button_drawable"
+            android:fontFamily="@font/font"
+            android:onClick="handleFindPost"
+            android:padding="7sp"
+            android:text="Find a Ride"
+            android:textColor="@color/white"
+            android:textSize="10sp" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.6dp"
+            android:background="#c0c0c0" />
+
+
+    </LinearLayout>
+
+    <!--Offering a ride-->
+    <LinearLayout
+        android:id="@+id/offeringRide"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5sp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/linear_background"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+
+        <EditText
+            android:id="@+id/riderGoing"
+            android:layout_width="match_parent"
+            android:layout_height="45sp"
+            android:layout_marginLeft="7sp"
+            android:background="@null"
+            android:drawableRight="@drawable/location"
+            android:fontFamily="@font/font"
+            android:hint="@string/planning_to_go"
+            android:imeActionLabel="Sign In"
+            android:imeOptions="actionUnspecified"
+            android:inputType="text"
+            android:padding="7sp"
+            android:textColorHint="@color/black"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.6dp"
+            android:background="#c0c0c0" />
+
+        <EditText
+            android:id="@+id/riderPick"
+            android:layout_width="match_parent"
+            android:layout_height="45sp"
+            android:layout_marginLeft="7sp"
+            android:background="@null"
+            android:drawableRight="@drawable/location"
+            android:fontFamily="@font/font"
+            android:hint="@string/where_to_pick_passenger"
+            android:inputType="text"
+            android:padding="7sp"
+            android:textColorHint="@color/black"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.6dp"
+            android:background="#c0c0c0" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <EditText
+                android:id="@+id/rideDate"
+                android:layout_width="0dp"
+                android:layout_height="45sp"
+                android:layout_marginLeft="7sp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:drawableRight="@drawable/ic_date_range_black_24dp"
+                android:fontFamily="@font/font"
+                android:hint="@string/which_date"
+                android:inputType="text"
+                android:padding="7sp"
+                android:textColorHint="@color/black"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/riderSeats"
+                android:layout_width="0dp"
+                android:layout_height="45sp"
+                android:layout_marginLeft="7sp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:drawableRight="@drawable/ic_airline_seat_recline_extra_black_24dp"
+                android:fontFamily="@font/font"
+                android:hint="@string/seat_no"
+                android:inputType="text"
+                android:padding="7sp"
+                android:textColorHint="@color/black"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0.6dp"
+                android:layout_weight="0.9"
+                android:background="#c0c0c0" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0.6dp"
+                android:layout_weight="0.1"
+                android:background="@null" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0.6dp"
+                android:layout_weight="1"
+                android:background="#c0c0c0" />
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="30sp"
+            android:layout_marginLeft="7sp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/button_drawable"
+            android:fontFamily="@font/font"
+            android:onClick="handleOfferPost"
+            android:padding="7sp"
+            android:text="Offer a Ride"
+            android:textColor="@color/white"
+            android:textSize="10sp" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.6dp"
+            android:background="#c0c0c0" />
+
+
+    </LinearLayout>
+</LinearLayout>
