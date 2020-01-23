@@ -9,8 +9,7 @@ Android app that displays all your app information. including WIFI, Device versi
 * **Kiprotich Japheth**
 
 ## License
-
--------
+ 
 
     Copyright 2017 - 2020 Kiprotich Japheth
 
