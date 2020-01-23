@@ -10,6 +10,14 @@ Android app that displays all your app information. including WIFI, Device versi
 |<img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://github.com/Keeprawteach/Device-Info/blob/master/screenshots/device-2020-01-22-111418.png"> System Display |  <img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://github.com/Keeprawteach/Device-Info/blob/master/screenshots/device-2020-01-22-111529.png"> Network |<img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://github.com/Keeprawteach/Device-Info/blob/master/screenshots/battery.png"> Battery Data |
 |<img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://github.com/Keeprawteach/Device-Info/blob/master/screenshots/processor.png">  Processor|  <img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://github.com/Keeprawteach/Device-Info/blob/master/screenshots/camera.png"> Camera|<img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://github.com/Keeprawteach/Device-Info/blob/master/screenshots/storage.png"> Storage |
 
+
+
+### Motivation
+
+
+<img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://github.com/Keeprawteach/Device-Info/blob/master/screenshots/play.png"> 
+
+
 ## Authors
 
 * **Kiprotich Japheth**
